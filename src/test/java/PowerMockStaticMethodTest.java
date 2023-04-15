@@ -19,7 +19,7 @@ public class PowerMockStaticMethodTest {
         // 2. Another generic String message, to be used as an expectation.
         String expectation = "Expectation";
 
-        // 3. Prepare ClassWithStaticMethod for static method test.
+        // 3. Prepare the class ClassWithStaticMethod for static method test.
         PowerMockito.mockStatic(ClassWithStaticMethod.class);
 
         // 4. Preparing expectations when the static method will be invoked.
