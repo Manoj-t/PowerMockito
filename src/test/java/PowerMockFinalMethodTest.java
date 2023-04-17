@@ -22,7 +22,11 @@ public class PowerMockFinalMethodTest {
         String message = "Hello PowerMockito!";
 
         // 2. Create a mock instance of the system under test
-        ClassWithFinalMethods mockObject = PowerMockito.mock(ClassWithFinalMethods.class);
+        ClassWithFinalMethods mockObject = PowerMockito.mock(ClassWithFinalMethods.class,
+                                                                Mockito.withSettings()
+                                                                        .name("ClassWithFinalMethodsMock")
+                                                                        .verboseLogging()
+                                                            );
 
         /*3. whenNew() method makes sure whenever an instance of this class is made using the new keyword by invoking
         a no argument constructor, this mock instance is returned instead of the real object */
